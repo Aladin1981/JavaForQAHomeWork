@@ -8,7 +8,7 @@ import java.sql.*;
 import java.sql.Connection;
 
 public class WeatherYandexApi {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, SQLException {
         ObjectMapper objectMapper = new ObjectMapper();
 
         OkHttpClient okHttpClient= new OkHttpClient();
@@ -40,7 +40,7 @@ public class WeatherYandexApi {
                 String.valueOf(objectMapper.readTree(body).at("/now_dt")),
                 String.valueOf(objectMapper.readTree(body).at("/fact/temp")));
 
-        System.out.println("Place: "+ weather.getPlace()+"Temperature: " + weather.getTemp()+"Data: "+weather.getData());
+        //System.out.println("Place: "+ weather.getPlace()+"Temperature: " + weather.getTemp()+"Data: "+weather.getData());
 
 //        JsonNode  jPlace = objectMapper.readTree(body).at("/info/tzinfo/name");
 //        JsonNode  jData = objectMapper.readTree(body).at("/now_dt");
@@ -66,6 +66,7 @@ public class WeatherYandexApi {
             preparedStatement.setString(2, weather.getData());
             preparedStatement.setString(3, weather.getTemp());
             preparedStatement.addBatch();
+            preparedStatement.executeBatch();
 
 
 //            ResultSet resultSet = statement.executeQuery("select * from temperature1");
