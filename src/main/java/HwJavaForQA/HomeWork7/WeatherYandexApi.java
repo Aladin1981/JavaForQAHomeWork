@@ -68,27 +68,27 @@ public class WeatherYandexApi {
             preparedStatement.addBatch();
             preparedStatement.executeBatch();
 
-
-//            ResultSet resultSet = statement.executeQuery("select * from temperature1");
-//            while (resultSet.next()) {
-//               // System.out.print(resultSet.getInt("id"));
-//                System.out.print(" ");
-//                System.out.println(resultSet.getString("place"));
-//                System.out.print("");
-//                System.out.println(resultSet.getString("data"));
-//                System.out.print("");
-//                System.out.println(resultSet.getString("temp"));
-//            }
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from temperature1");
+            while (resultSet.next()) {
+                System.out.print(resultSet.getInt("id"));
+                System.out.print(" ");
+                System.out.println(resultSet.getString("place"));
+                System.out.print(" ");
+                System.out.println(resultSet.getString("data"));
+                System.out.print(" ");
+                System.out.println(resultSet.getString("temp"));
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException throwables) {
-            throwables.printStackTrace();
+           // throwables.printStackTrace();
+            System.out.println("Здесь выходит SQLException");
+        }finally {
+           connection.close();
+            statement.close();
+            preparedStatement.close();
         }
-//        finally {
-//            connection.close();
-//            statement.close();
-//            preparedStatement.close();
-//        }
 
 
 //
