@@ -1,0 +1,120 @@
+{
+  "id": "30254dac-4375-4ae9-ac51-007165b2c0bf",
+  "version": "2.0",
+  "name": "HW1UI",
+  "url": "https://crm.geekbrains.space",
+  "tests": [{
+    "id": "d0cff3d4-32e6-401f-9e9c-a7bd0bb05e52",
+    "name": "positiveAutorization",
+    "commands": [{
+      "id": "6d3ceef0-e8cd-4c6d-81c4-d412663ebf85",
+      "comment": "",
+      "command": "open",
+      "target": "/user/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17684523-05c0-47b3-bb65-dac68561cb72",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "870x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f7880f3-662f-4599-af67-fe92a61e2443",
+      "comment": "",
+      "command": "click",
+      "target": "id=prependedInput",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34043766-2e2e-40e2-8b03-52e78db5a751",
+      "comment": "",
+      "command": "type",
+      "target": "id=prependedInput",
+      "targets": [
+        ["id=prependedInput", "id"],
+        ["name=_username", "name"],
+        ["css=#prependedInput", "css:finder"],
+        ["xpath=//input[@id='prependedInput']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ApplanaTest1"
+    }, {
+      "id": "7feaf7a9-7c76-4fb1-aabb-c7dc11fb6497",
+      "comment": "",
+      "command": "click",
+      "target": "id=prependedInput2",
+      "targets": [
+        ["id=prependedInput2", "id"],
+        ["name=_password", "name"],
+        ["css=#prependedInput2", "css:finder"],
+        ["xpath=//input[@id='prependedInput2']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dacb0d84-9cc5-4590-ab40-5867d5caeb69",
+      "comment": "",
+      "command": "type",
+      "target": "id=prependedInput2",
+      "targets": [
+        ["id=prependedInput2", "id"],
+        ["name=_password", "name"],
+        ["css=#prependedInput2", "css:finder"],
+        ["xpath=//input[@id='prependedInput2']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Student2020!"
+    }, {
+      "id": "10920a08-e57b-4b1b-97f9-16c94e65cbe9",
+      "comment": "",
+      "command": "click",
+      "target": "id=_submit",
+      "targets": [
+        ["id=_submit", "id"],
+        ["name=_submit", "name"],
+        ["css=#\\_submit", "css:finder"],
+        ["xpath=//button[@id='_submit']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/fieldset/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Войти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acbd28b4-31c3-450e-80cc-ba2a9ea6d7c9",
+      "comment": "",
+      "command": "waitForText",
+      "target": "css=#user-menu > a",
+      "targets": [],
+      "value": "Applanatest1 Applanatest1 Applanatest1"
+    }, {
+      "id": "40df5e39-4d0a-4824-bc28-3592a5729063",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#user-menu > a",
+      "targets": [],
+      "value": "Applanatest1 Applanatest1 Applanatest1                "
+    }]
+  }],
+  "suites": [{
+    "id": "8badb9fb-7592-4d37-9ccb-da9f8153a3a7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d0cff3d4-32e6-401f-9e9c-a7bd0bb05e52"]
+  }],
+  "urls": ["https://crm.geekbrains.space/"],
+  "plugins": []
+}
