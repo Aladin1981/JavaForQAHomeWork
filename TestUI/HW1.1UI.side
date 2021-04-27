@@ -1,0 +1,108 @@
+{
+  "id": "7516c81e-29b1-4bb1-8ef6-8f7c69d5eca1",
+  "version": "2.0",
+  "name": "HW1.1UI",
+  "url": "https://unsplash.com",
+  "tests": [{
+    "id": "14cb53ba-0f7b-4db0-b239-53d2fc925add",
+    "name": "positiveAutorization1",
+    "commands": [{
+      "id": "fd862916-336f-4f81-a61c-8ab71438f315",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e062640-99f5-4d72-94dd-f3790422c829",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdf09d83-f4e3-4889-8946-7f98583c8ccc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.\\_1f1yp", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='app']/div/header/nav/div[3]/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29a2086e-8cc5-4969-93dc-7b83cfa891f2",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_email",
+      "targets": [
+        ["id=user_email", "id"],
+        ["name=user[email]", "name"],
+        ["css=#user_email", "css:finder"],
+        ["xpath=//input[@id='user_email']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "moytestyashik1@mail.ru"
+    }, {
+      "id": "feedbd61-42eb-44a6-ba0d-a7e000c656ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=user_password",
+      "targets": [
+        ["id=user_password", "id"],
+        ["name=user[password]", "name"],
+        ["css=#user_password", "css:finder"],
+        ["xpath=//input[@id='user_password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7539ad7f-6d03-474b-9e08-32008d0095d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=user_password",
+      "targets": [
+        ["id=user_password", "id"],
+        ["name=user[password]", "name"],
+        ["css=#user_password", "css:finder"],
+        ["xpath=//input[@id='user_password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "1234567890"
+    }, {
+      "id": "f2a05d1c-cb1a-4241-9a1a-bc913e8930d2",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=.form-group:nth-child(7) > .btn", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb73f70-7dec-46ce-b94c-b0800c832075",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"app\"]/div/div[2]/div/div[2]",
+      "targets": [],
+      "value": "Your email moytestyashik1@mail.ru has not been confirmed. Change email or Resend confirmation"
+    }]
+  }],
+  "suites": [{
+    "id": "481456ee-ec95-4d3c-af41-83ed886cfe1b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["14cb53ba-0f7b-4db0-b239-53d2fc925add"]
+  }],
+  "urls": ["https://unsplash.com/"],
+  "plugins": []
+}
